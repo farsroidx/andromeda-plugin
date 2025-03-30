@@ -57,11 +57,11 @@
             displayType="BALLOON"
             key="notification.group.name" />
 
-        <internalFileTemplate name="/fileTemplates/ComposeScreen.screen" />
-        <internalFileTemplate name="/fileTemplates/ComposeScreen.ui_state" />
-        <internalFileTemplate name="/fileTemplates/ComposeScreen.ui_event" />
-        <internalFileTemplate name="/fileTemplates/ComposeScreen.ui_state" />
-        <internalFileTemplate name="/fileTemplates/ComposeScreen.viewmodel" />
+        <internalFileTemplate name="/fileTemplates/ComposeScreen.screen.ft" />
+        <internalFileTemplate name="/fileTemplates/ComposeScreen.ui_state.ft" />
+        <internalFileTemplate name="/fileTemplates/ComposeScreen.ui_event.ft" />
+        <internalFileTemplate name="/fileTemplates/ComposeScreen.ui_state.ft" />
+        <internalFileTemplate name="/fileTemplates/ComposeScreen.viewmodel.ft" />
 
     </extensions>
 

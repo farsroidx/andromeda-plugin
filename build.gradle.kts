@@ -27,7 +27,7 @@ sourceSets {
 
     main {
 
-        // resources.srcDirs("src/main/resources")
+        resources.srcDirs("src/main/resources")
 
     }
 }
@@ -58,4 +58,10 @@ tasks {
     publishPlugin {
         token.set(System.getenv("PUBLISH_TOKEN"))
     }
+}
+
+tasks.register("exportPlugin") {
+    dependsOn(
+        "buildPlugin", "verifyPlugin", "signPlugin"
+    )
 }
