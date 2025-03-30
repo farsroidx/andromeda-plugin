@@ -1,0 +1,38 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}
+#end
+
+import dagger.hilt.android.lifecycle.HiltViewModel
+import ir.farsroidx.common.abstracts.viewmodel.ReactiveViewModel
+import kotlinx.coroutines.delay
+import javax.inject.Inject
+
+@HiltViewModel
+class ${NAME}ViewModel @Inject constructor() : ReactiveViewModel<${NAME}UiState, ${NAME}UiAction, ${NAME}UiEvent>() {
+
+    @Suppress("REDUNDANT_ELSE_IN_WHEN")
+    override fun onAction(action: ${NAME}UiAction) {
+
+        when(action) {
+
+            is ${NAME}UiAction.DefaultAction -> defaultAction(action.param1, action.param2)
+
+			else -> {
+				// Default implementation does nothing, can be overridden
+			}
+        }
+    }
+
+    private fun defaultAction(param1: Any, param2: Any) = ioViewModelScope {
+
+        delay(1000)
+
+        newEvent( ${NAME}UiEvent.DefaultEvent )
+
+    }
+
+    fun onValueChanged(value: String) {
+        setUiState(
+            lastState.copy(param02 = value)
+        )
+    }
+}

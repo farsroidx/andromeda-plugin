@@ -1,0 +1,83 @@
+<!--suppress ALL -->
+<idea-plugin>
+
+    <id>ir.farsroidx.m31</id>
+
+    <name>Andromeda</name>
+
+    <vendor email="admin@farsroidx.com" url="https://m31.farsroidx.com">Farsroidx</vendor>
+
+    <description><![CDATA[
+        Supercharge your Jetpack Compose development with <strong>Andromeda</strong>! ⚡🚀
+        <br><br>
+        Designed primarily for personal use, but if it fits your workflow, go ahead and use it! 🎯
+        <br><br>
+        This plugin streamlines your development process by automating repetitive tasks, allowing you to focus on writing clean, efficient code.
+        <br><br>
+        One of its key features is the <strong>Screen Generator</strong>, which drastically reduces setup time by creating structured Compose screen files with just a name input.
+        <br><br>
+        Whether you're managing UI elements, handling state, or implementing business logic, this tool ensures a faster, more organized workflow.
+        <br><br>
+        And this is just the beginning. Stay tuned for more exciting updates and features in the future!! 🔥😎
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <h3>v1.0.0 - Initial Release</h3>
+        <ul>
+            <li>Added <strong>Screen Generator</strong> for automatic Jetpack Compose screen file creation</li>
+            <li>Supported <strong>MVI architecture</strong> for better UI state management</li>
+            <li>Improved development efficiency by reducing boilerplate code</li>
+            <li>Generated file structure includes:</li>
+            <ul>
+                <li>✅ <strong>Screen</strong>    – Handles and structures UI elements like Scaffold, Column, etc.</li>
+                <li>✅ <strong>UiAction</strong>  – Handles user interactions.</li>
+                <li>✅ <strong>UiState</strong>   – Manages UI-related variables.</li>
+                <li>✅ <strong>UiEvent</strong>   – Sends events such as loading states and errors.</li>
+                <li>✅ <strong>ViewModel</strong> – Controls business logic.</li>
+            </ul>
+        </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+
+        <notificationGroup
+            id="FARSROIDX_INFO_NOTIFICATIONS"
+            displayType="BALLOON"
+            key="notification.group.name" />
+
+        <notificationGroup
+            id="FARSROIDX_WARNING_NOTIFICATIONS"
+            displayType="BALLOON"
+            key="notification.group.name" />
+
+        <notificationGroup
+            id="FARSROIDX_ERROR_NOTIFICATIONS"
+            displayType="BALLOON"
+            key="notification.group.name" />
+
+        <internalFileTemplate name="/fileTemplates/ComposeScreen.screen" />
+        <internalFileTemplate name="/fileTemplates/ComposeScreen.ui_state" />
+        <internalFileTemplate name="/fileTemplates/ComposeScreen.ui_event" />
+        <internalFileTemplate name="/fileTemplates/ComposeScreen.ui_state" />
+        <internalFileTemplate name="/fileTemplates/ComposeScreen.viewmodel" />
+
+    </extensions>
+
+    <actions>
+
+        <action
+            id="ir.farsroidx.m31.actions.NewScreenAction"
+            class="ir.farsroidx.m31.actions.NewScreenAction"
+            text="New Compose Screen"
+            icon="ir.farsroidx.m31.Andromeda.Icons.Compose"
+            description="Show a simple toast message">
+
+            <add-to-group group-id="NewGroup" anchor="first" />
+
+        </action>
+
+    </actions>
+
+</idea-plugin>

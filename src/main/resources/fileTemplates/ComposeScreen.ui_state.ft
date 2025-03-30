@@ -1,0 +1,17 @@
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME} 
+#end
+
+data class ${NAME}UiState(
+    var param01: Char             = '?',
+    var param02: String           = "",
+    var param03: Byte             = Byte.MIN_VALUE,
+    var param04: Short            = Short.MIN_VALUE,
+    var param05: Int              = Int.MIN_VALUE,
+    var param06: Float            = Float.MIN_VALUE,
+    var param07: Double           = Double.MIN_VALUE,
+    var param08: Long             = Long.MIN_VALUE,
+    var param09: Boolean          = false,
+    var param10: List<String>     = listOf(),
+    var param11: Set<String>      = setOf(),
+    var param12: Map<String, Int> = mapOf(),
+)
