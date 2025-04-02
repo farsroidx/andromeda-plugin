@@ -1,13 +1,22 @@
+@file:Suppress("unused")
+
 #if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME}
 #end
 
+import androidx.lifecycle.SavedStateHandle
 import dagger.hilt.android.lifecycle.HiltViewModel
 import ir.farsroidx.common.abstracts.viewmodel.ReactiveViewModel
 import kotlinx.coroutines.delay
 import javax.inject.Inject
 
+/**
+ * To add the required dependency for this, visit the following link:
+ * [Andromeda ViewModel Dependency](https://github.com/farsroidx/andromeda-viewmodel)
+ */
 @HiltViewModel
-class ${NAME}ViewModel @Inject constructor() : ReactiveViewModel<${NAME}UiState, ${NAME}UiAction, ${NAME}UiEvent>() {
+class ${NAME}ViewModel @Inject constructor(
+    private val stateHandle: SavedStateHandle
+) : AndromedaReactiveViewModel<${NAME}UiState, ${NAME}UiAction, ${NAME}UiEvent>() {
 
     @Suppress("REDUNDANT_ELSE_IN_WHEN")
     override fun onAction(action: ${NAME}UiAction) {

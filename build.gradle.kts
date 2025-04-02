@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "ir.farsroidx.m31"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -21,15 +21,6 @@ intellij {
     plugins.set(
         listOf(/* Plugin Dependencies */)
     )
-}
-
-sourceSets {
-
-    main {
-
-        resources.srcDirs("src/main/resources")
-
-    }
 }
 
 tasks {

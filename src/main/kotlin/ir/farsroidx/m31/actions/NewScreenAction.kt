@@ -126,7 +126,7 @@ class NewScreenAction : AnAction("New Compose Screen") {
             )
 
             createFileTemplate(
-                templateName = "ComposeScreen.ui_state",
+                templateName = "ComposeScreen.ui_action",
                 screenName = screenName,
                 directory = virtualFile,
                 fileName = fileName1,

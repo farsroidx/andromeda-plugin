@@ -22,6 +22,15 @@
     ]]></description>
 
     <change-notes><![CDATA[
+        <h3>v1.0.1 - Bug Fixes & Improvements 🛠️</h3>
+        <ul>
+            <li>🐛 Fixed various bugs in <strong>Screen Generator</strong> to ensure correct file structure.</li>
+            <li>🔧 Resolved initialization issues in <strong>UiState</strong>.</li>
+            <li>🚀 Enhanced stability and performance in <strong>MVI architecture</strong>.</li>
+            <li>⚡ Optimized <strong>ViewModel</strong> to reduce unnecessary state updates.</li>
+            <li>🎨 Minor UI adjustments and overall performance improvements.</li>
+        </ul>
+        <hr>
         <h3>v1.0.0 - Initial Release</h3>
         <ul>
             <li>Added <strong>Screen Generator</strong> for automatic Jetpack Compose screen file creation</li>
@@ -58,7 +67,7 @@
             key="notification.group.name" />
 
         <internalFileTemplate name="/fileTemplates/ComposeScreen.screen.ft" />
-        <internalFileTemplate name="/fileTemplates/ComposeScreen.ui_state.ft" />
+        <internalFileTemplate name="/fileTemplates/ComposeScreen.ui_action.ft" />
         <internalFileTemplate name="/fileTemplates/ComposeScreen.ui_event.ft" />
         <internalFileTemplate name="/fileTemplates/ComposeScreen.ui_state.ft" />
         <internalFileTemplate name="/fileTemplates/ComposeScreen.viewmodel.ft" />
